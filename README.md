@@ -1,2 +1,2 @@
 # My Personal Website
-Just a small AppEngine project to host all of my projects and some basic info about me.
+Just a small website to host all of my projects and some basic info about me.
