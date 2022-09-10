@@ -21,13 +21,13 @@ const withMDX = nextMDX({
   },
 })
 
-const isProd = process.env.NODE_ENV === 'production'
+// const isProd = process.env.NODE_ENV === 'production'
 
-module.exports = {
-  assetPrefix: isProd ? '/coffmarp.github.io/' : '',
-  images: {
-    unoptimized: true,
-  },
-}
+// module.exports = {
+//   assetPrefix: isProd ? '/coffmarp.github.io/' : '',
+//   images: {
+//     unoptimized: true,
+//   },
+// }
 
 export default withMDX(nextConfig)
