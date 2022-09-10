@@ -3,10 +3,15 @@ import remarkGfm from 'remark-gfm'
 import rehypePrism from '@mapbox/rehype-prism'
 
 /** @type {import('next').NextConfig} */
+const isProd = process.env.NODE_ENV === "production";
 const nextConfig = {
   pageExtensions: ['jsx', 'mdx'],
   reactStrictMode: true,
   swcMinify: true,
+  assetPrefix: isProd ? "/nextjs-github-pages/" : "",
+  images: {
+    unoptimized: true,
+  },
   experimental: {
     newNextLinkBehavior: true,
     scrollRestoration: true,
@@ -20,14 +25,5 @@ const withMDX = nextMDX({
     rehypePlugins: [rehypePrism],
   },
 })
-
-// const isProd = process.env.NODE_ENV === 'production'
-
-// module.exports = {
-//   assetPrefix: isProd ? '/coffmarp.github.io/' : '',
-//   images: {
-//     unoptimized: true,
-//   },
-// }
 
 export default withMDX(nextConfig)
