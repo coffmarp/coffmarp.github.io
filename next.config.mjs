@@ -3,12 +3,12 @@ import remarkGfm from 'remark-gfm'
 import rehypePrism from '@mapbox/rehype-prism'
 
 /** @type {import('next').NextConfig} */
-//const isProd = process.env.NODE_ENV === "production";
+const isProd = process.env.NODE_ENV === "production";
 const nextConfig = {
   pageExtensions: ['jsx', 'mdx'],
   reactStrictMode: true,
   swcMinify: true,
-  assetPrefix: "",
+  assetPrefix: isProd ? "/coffmarp.github.io/" : "",
   images: {
     unoptimized: true,
   },
