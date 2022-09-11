@@ -1,0 +1,7 @@
+.
+├── pages
+├── public
+│   └── .nokjekyll
+├── src
+│   └── styles
+├── next.config.mjs
